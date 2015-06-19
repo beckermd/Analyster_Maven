@@ -166,7 +166,7 @@ public class Analyster extends JFrame {
         this.setLocationRelativeTo(null);
         this.setTitle("Analyster");
         jUpload.setVisible(false);
-        jPanelSQL.setVisible(false);
+        jPanelSQL.setVisible(false); 
         jDebugEnter.setVisible(true);
         jDebugCancel.setVisible(true);
         jButtonCancel.setVisible(false);
@@ -296,7 +296,8 @@ public class Analyster extends JFrame {
         jMenuItemOtherReport = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(894, 557));
+        setPreferredSize(new java.awt.Dimension(894, 552));
+        setSize(new java.awt.Dimension(0, 0));
 
         addPanel_control.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -376,9 +377,7 @@ public class Analyster extends JFrame {
                         .addGap(7, 12, Short.MAX_VALUE))))
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 153)));
-
-        jTabbedPanel1.setPreferredSize(new java.awt.Dimension(800, 450));
+        jTabbedPanel1.setPreferredSize(new java.awt.Dimension(800, 584));
         jTabbedPanel1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPanel1StateChanged(evt);
@@ -532,6 +531,8 @@ public class Analyster extends JFrame {
 
         jTabbedPanel1.addTab("Viewer", jScrollPane5);
 
+        jPanelEdit.setPreferredSize(new java.awt.Dimension(636, 180));
+
         jBatchEdit.setText("Batch Edit");
         jBatchEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -597,7 +598,7 @@ public class Analyster extends JFrame {
         jPanelEditLayout.setVerticalGroup(
             jPanelEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEditLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUpload, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
@@ -605,29 +606,8 @@ public class Analyster extends JFrame {
                     .addComponent(jLabelEdit)
                     .addComponent(jButtonCancel)
                     .addComponent(jBatchEdit)
-                    .addComponent(jBatchAdd))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jBatchAdd)))
         );
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
-            .addComponent(jPanelEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jTabbedPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jTabbedPanel1.getAccessibleContext().setAccessibleName("Reports");
-        jTabbedPanel1.getAccessibleContext().setAccessibleParent(jTabbedPanel1);
-
-        jPanelSQL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
 
         jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
 
@@ -669,26 +649,52 @@ public class Analyster extends JFrame {
         jPanelSQLLayout.setHorizontalGroup(
             jPanelSQLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSQLLayout.createSequentialGroup()
-                .addGap(213, 213, 213)
-                .addComponent(jDebugEnter)
-                .addGap(71, 71, 71)
-                .addComponent(jDebugCancel)
-                .addGap(65, 65, 65)
-                .addComponent(closeDebugPanelBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane2)
+                .addGap(4, 4, 4)
+                .addGroup(jPanelSQLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jDebugCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDebugEnter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(closeDebugPanelBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(4, 4, 4)
+                .addComponent(jScrollPane2)
+                .addGap(4, 4, 4))
         );
         jPanelSQLLayout.setVerticalGroup(
             jPanelSQLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSQLLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(jDebugEnter)
+                .addGap(4, 4, 4)
+                .addComponent(jDebugCancel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(closeDebugPanelBtn)
+                .addGap(4, 4, 4))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSQLLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelSQLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jDebugEnter)
-                    .addComponent(jDebugCancel)
-                    .addComponent(closeDebugPanelBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(4, 4, 4)
+                .addComponent(jScrollPane2)
+                .addGap(4, 4, 4))
         );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
+            .addComponent(jPanelSQL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jTabbedPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jPanelEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(jPanelSQL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+
+        jTabbedPanel1.getAccessibleContext().setAccessibleName("Reports");
+        jTabbedPanel1.getAccessibleContext().setAccessibleParent(jTabbedPanel1);
 
         jMenuFile.setText("File");
 
@@ -851,17 +857,14 @@ public class Analyster extends JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(addPanel_control, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelSQL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(addPanel_control, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelSQL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -870,8 +873,8 @@ public class Analyster extends JFrame {
     private void jMenuItemFileVersionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileVersionActionPerformed
 
         JOptionPane.showMessageDialog(this, "Creation Date: "
-                + "2015-06-08" + "\n"
-                + "Version: " + "0.6.2f.d");
+                + "2015-06-18" + "\n"
+                + "Version: " + "0.6.3b");
     }//GEN-LAST:event_jMenuItemFileVersionActionPerformed
 
     private void textForSearchMouseClicked(MouseEvent evt) {//GEN-FIRST:event_textForSearchMouseClicked
@@ -1304,11 +1307,36 @@ public class Analyster extends JFrame {
     }//GEN-LAST:event_jCheckBoxMenuItemViewLogActionPerformed
 
     private void jCheckBoxMenuItemViewSQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemViewSQLActionPerformed
-        // Open and close debug window pane and a check in check box when open
+ 
+        /**
+         * ************* Strange behavior *************************
+         * The jPanelSQL.getHeight() is the height before 
+         * the jCheckBoxMenuItemViewSQLActionPerformed method was called.
+         * 
+         * The jPanelSQL.setVisible() does not change the size 
+         * of the sql panel after it is executed.
+         * 
+         * The jPanel size will only change after 
+         * the jCheckBoxMenuItemViewSQLActionPerformed is finished.
+         * 
+         * That is why the the actual integer is used rather than  getHeight().
+         * 
+         * Example:
+         * jPanelSQL.setVisible(true);
+         * jPanelSQL.getHeight(); // this returns 0
+         */
+        
         if(jCheckBoxMenuItemViewSQL.isSelected()){
+            
+            // show sql panel
             jPanelSQL.setVisible(true);
+            this.setSize(this.getWidth(), this.getHeight() + 98); 
+            
         }else{
+            
+            // hide sql panel
             jPanelSQL.setVisible(false);
+            this.setSize(this.getWidth(), this.getHeight() - 98);
         }
     }//GEN-LAST:event_jCheckBoxMenuItemViewSQLActionPerformed
 
