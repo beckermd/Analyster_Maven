@@ -57,7 +57,7 @@ public class Analyster extends JFrame {
     private static int numberArchiveAssignInit;
     private Logger log = LoggerFactory.getLogger(Analyster.class);
     private LogWindow logwind = new LogWindow(); 
-    public TableState viewer = new TableState();
+//    public TableState viewer = new TableState();
     public TableState assignments = new TableState();
     public TableState reports = new TableState();
     public TableState archiveAssign = new TableState();
@@ -1684,8 +1684,8 @@ public class Analyster extends JFrame {
                 return reports;
             case ARCHIVE_TABLE_NAME:
                 return archiveAssign;
-            case "Viewer":
-                return viewer;
+//            case "Viewer":
+//                return viewer;
             default:
                 return null;
         }
@@ -1699,9 +1699,9 @@ public class Analyster extends JFrame {
         } else if (table == archiveAssignTable) {
             return archiveAssign;
         } 
-        else if (table == viewerTable) {
-            return viewer;
-        } 
+//        else if (table == viewerTable) {
+//            return viewer;
+//        }
         else {
             JOptionPane.showMessageDialog(null, "TableState not found!");
             return null;
@@ -1730,9 +1730,9 @@ public class Analyster extends JFrame {
         return assignments;
     }
 
-    public TableState getViewer() {
-        return viewer;
-    }
+//    public TableState getViewer() {
+//        return viewer;
+//    }
 
     public TableState getReports() {
         return reports;
